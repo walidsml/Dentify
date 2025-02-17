@@ -1,0 +1,125 @@
+.pricing-box-items {
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+    padding: 50px;
+    margin-top: 30px;
+
+    .pricing-header {
+
+        span {
+            display: inline-flex;
+            padding: 7px 14px;
+            border-radius: 4px;
+            background: #EBF3FC;
+            color: $theme-color;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 66px;
+            font-weight: 700;
+            color: $theme-color;
+            margin-top: 20px;
+
+            @include breakpoint (max-lg) {
+                font-size: 50px;
+            }
+
+            sub {
+                font-size: 13px;
+                font-weight: 500;
+                color: $text-color;
+            }
+        }
+        p {
+            margin-top: 10px;
+        }
+        
+    }
+    .theme-btn {
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+    .pricing-list {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+            }
+        
+    }
+}
+
+.pricing-section {
+	.nav {
+		border: none;
+        justify-self: center;
+        margin-bottom: 30px;
+		
+		.nav-tabs {
+			border-bottom: 0;
+			display: flex;
+			justify-content: center;
+		}
+
+		.nav-link {
+			font-size: 18px;
+			font-weight: 500;
+			text-transform: capitalize;
+			border: 0;
+			border-radius: 0;
+			padding: 7px 56px;
+			position: relative;
+			background: transparent;
+			z-index: 2;
+			color: $text-color;
+			margin-bottom: 0;
+
+			&::before {
+				position: absolute;
+				content: "";
+				right: 0px;
+				top: 50%;
+				transform: translateY(-50%) translateX(50%);
+				background: $theme-color;
+				width: 75px;
+				height: 32px;
+				border-radius: 20px;
+				border: 1px solid $theme-color;
+			}
+			&::after {
+				position: absolute;
+				content: "";
+				right: -33px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 24px;
+				height: 24px;
+				border-radius: 50%;
+				background: #FFD25D;
+				z-index: 1;
+			}
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+				&::after {
+					display: none;
+				}
+				&::before {
+					display: none;
+				}
+			}
+			&.active {
+				color: $header-color;
+
+				&::after {
+					right: 8px;
+				}
+			}
+		}
+	}
+}

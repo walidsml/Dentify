@@ -1,0 +1,31 @@
+.brand-wrapper {
+
+    p {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .brand-img {
+        min-width: 180px;
+        height: 61px;
+        line-height: 61px;
+        background-color: $white;
+        border-radius: 4px;
+        box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+        text-align: center;
+    }
+} 
+
+.brand-section {
+    position: relative;
+
+    .left-shape {
+        position: absolute;
+        top: 123px;
+        left: -180px;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,386 @@
+.project-wrapper {
+    margin-left: -40%;
+    margin-right: -10%;
+    margin-top: 60px;
+    position: relative;
+
+    @include breakpoint (max-xl){
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include breakpoint (max-md){
+        margin-top: 30px;
+    }
+
+    .project-image {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+            position: absolute;
+            left: 20px;
+            bottom: -30px;
+            border-radius: 4px;
+            background: $white;
+            padding: 30px;
+
+            span {
+                color: $theme-color;
+            }
+
+            h3 {
+                a {
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+            .arrow-icon {
+                color: $white;
+                background: linear-gradient(106deg, #2AD3F8 10.42%, #933CFF 98.32%);
+                border-radius: 50%;
+                width: 56px;
+                height: 56px;
+                text-align: center;
+                line-height: 56px;
+                display: inline-block;
+                font-size: 22px;
+                position: absolute;
+                top: -28px;
+                right: 30px;
+                i {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        &:hover {
+            .content {
+                opacity: 1;
+                visibility: visible;
+                bottom: 30px;
+            }
+        }
+    }
+}
+
+.project-wrapper-2 {
+
+    .project-main-card {
+        
+        .project-card {
+            @include flex;
+            justify-content: space-between;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(2, 8, 66, 0.14);;
+            }
+
+            .project-list {
+                @include flex;
+                gap: 70px;
+                padding: 40px 0;
+
+                @include breakpoint (max-sm) {
+                    gap: 18px;
+                }
+
+                
+
+                li {
+                    font-size: 30px;
+                    font-weight: 700;
+                    font-family: $heading-font;
+                    color: $header-color;
+
+                    span {
+                        color: $theme-color;
+                        font-weight: 500;
+                    }
+
+                    @include breakpoint (max-lg) {
+                        font-size: 28px;
+                    }
+
+                    @include breakpoint (max-md) {
+                        font-size: 24px;
+                    }
+
+                    @include breakpoint (max-sm) {
+                        font-size: 20px;
+                    }
+
+                    a {
+
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+
+            .icon {
+                color: $header-color;
+                font-size: 14px;
+
+                a {
+                    &:hover {
+                        i {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .project-image {
+
+            img {
+                @include imgw;
+                border-radius: 12px;
+            }
+        }
+    }
+}
+
+.project-section {
+    position: relative;
+
+    .top-shape {
+        position: absolute;
+        top: -100px;
+        right: -150px;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .bottom-shape {
+        position: absolute;
+        right: 60px;
+        bottom: 0px;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .swiper-dot {
+        margin-top: 40px;
+        text-align: center;
+       
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            transition: 0.6s;
+            background: rgba(2, 8, 66, 1);
+            opacity: 1;
+            border-radius: 10px;
+            &:not(:last-child){
+            margin-right: 10px;
+            }
+        }
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background-color: rgba(2, 8, 66, 1);
+            transition: 0.6s;
+            position: relative;
+    
+            &::before{
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            line-height: 22px;
+            top: -6px;
+            left: -6px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid rgba(2, 8, 66, 1);
+            content: "";
+            }
+        }
+    }
+}
+
+.project-card-item {
+
+    .project-image {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .content {
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+            position: absolute;
+            left: 20px;
+            bottom: -30px;
+            border-radius: 4px;
+            background: $white;
+            padding: 30px;
+
+            span {
+                color: $theme-color;
+            }
+
+            h3 {
+                a {
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+            
+            .arrow-icon {
+                color: $white;
+                background: linear-gradient(106deg, #2AD3F8 10.42%, #933CFF 98.32%);
+                border-radius: 50%;
+                width: 56px;
+                height: 56px;
+                text-align: center;
+                line-height: 56px;
+                display: inline-block;
+                font-size: 22px;
+                position: absolute;
+                top: -28px;
+                right: 30px;
+                i {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        &:hover {
+            .content {
+                opacity: 1;
+                visibility: visible;
+                bottom: 30px;
+            }
+        }
+    }
+}
+
+.project-details-wrapper {
+    .project-details-items {
+        .details-image {
+            img {
+                @include imgw;
+            }
+        }
+
+        .details-content {
+            h3 {
+                font-size: 30px;
+                margin-bottom: 15px;
+
+                @include breakpoint (max-md){
+                    font-size: 26px;
+                }
+
+                @include breakpoint (max-sm){
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .project-catagory {
+            padding: 40px 30px;
+            background-color: $white;
+            box-shadow: $shadow;
+            border-top: 4px solid $theme-color;
+            margin-top: -150px;
+            margin-right: 30px;
+
+            @include breakpoint (max-lg){
+                margin-top: 0;
+            }
+
+            h3 {
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 30px;
+            }
+
+            ul {
+                li {
+                    font-weight: 600;
+                    color: $header-color;
+                    @include flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid $border-color;
+                    padding: 16px 0;
+
+                    span {
+                        font-weight: 500;
+
+                        i {
+                            color: $text-color;
+                            @include transition;
+
+                            &:hover {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .list {
+            li {
+                font-weight: 500;
+                color: $header-color;
+
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                
+                i {
+                    margin-right: 5px;
+                    color: $theme-color;
+                }
+            }
+        }
+
+        .thumb {
+            img {
+                @include imgw;
+            }
+        }
+    }
+
+    .preview-area {
+        margin-top: 80px;
+        @include flex;
+        justify-content: space-between;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 30px 0;
+        //flex-wrap: wrap;
+
+        .preview-item {
+            @include flex;
+            gap: 12px;
+
+            .content {
+                
+                &.text-right {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

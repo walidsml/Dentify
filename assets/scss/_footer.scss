@@ -1,0 +1,309 @@
+.footer-widget-wrapper {
+    padding: 90px 0 120px;
+
+    @include breakpoint(max-xl){
+		padding: 70px 0 100px;
+	}
+
+	@include breakpoint(max-lg){
+		padding: 50px 0 80px;
+	}
+
+    .single-footer-widget {
+        margin-top: 30px;
+        position: relative;
+
+        .widget-head {
+            margin-bottom: 30px;
+    
+            h3 {
+                color: $white;
+            }
+        }
+
+        .footer-content {
+            p {
+                color: rgba(255, 255, 255, 0.75);
+                font-weight: 500;
+            }
+
+            .search-widget {
+                position: relative;
+                margin-top: 30px;
+                max-width: 282px;
+                width: 100%;
+        
+                input {
+                    width: 100%;
+                    border: none;
+                    background-color: transparent;
+                    position: relative;
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 18px 20px;
+                    color: $text-color;
+                    border-radius: 4px;
+                    border: 1px solid rgba(255, 255, 255, 0.13);
+                    text-transform: capitalize;
+        
+                    &::placeholder {
+                        color: $text-color;
+                    }
+                }
+        
+                button {
+                    position: absolute;
+                    right: 6px;
+                    top: 7px;
+                    bottom: 7px;
+        
+                    &.theme-btn {
+                        padding: 10px 20px;
+    
+                        i {
+                            transform: rotate(0deg);
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .single-footer-widget {
+                margin-top: 30px;
+                position: relative;
+        
+                .widget-head {
+                    margin-bottom: 20px;
+            
+                    h4 {
+                        color: $white;
+                    }
+                }
+        
+                .footer-content {
+                    p {
+                        color: $white;
+                    }
+        
+                    .social-icon {
+                        margin-top: 40px;
+                        @include flex;
+                        gap: 10px;
+            
+                        a {
+                            width: 32px;
+                            height: 32px;
+                            line-height: 32px;
+                            display: inline-block;
+                            text-align: center;
+                            color: $white;
+                            border: 1px solid $white;
+                            border-radius: 100px;
+            
+                            &:hover {
+                                background-color: $theme-color;
+                                border: 1px solid $theme-color;
+                            }
+                        }
+                    }
+                }
+        
+                .contact-info {
+        
+                    h6 {
+                        color: $bg-color;
+                        line-height: 162%;
+        
+                        &:not(:last-child) {
+                            margin-bottom: 30px;
+                        }
+        
+                        a {
+                            color: $bg-color;
+                        }
+                    }
+                }
+        
+                .list-items {
+        
+                    li {
+                        @include transition;
+                        font-weight: 600;
+                        font-size: 16px;
+        
+                        a {
+                            color: $bg-color;
+                        }
+        
+                        &:not(:last-child){
+                            margin-bottom: 13px;
+                        }
+        
+                        &:hover {
+                            margin-left: 5px;
+        
+                            a {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+               }
+        
+               .search-widget {
+                position: relative;
+                margin-top: 30px;
+                max-width: 282px;
+                width: 100%;
+        
+                input {
+                    width: 100%;
+                    border: none;
+                    background-color: $white;
+                    position: relative;
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding: 18px 20px;
+                    color: $text-color;
+                    border-radius: 4px;
+                    border: 1px solid rgba(255, 255, 255, 0.13);
+                    text-transform: capitalize;
+        
+                    &::placeholder {
+                        color: $text-color;
+                    }
+                }
+        
+                button {
+                    position: absolute;
+                    right: 6px;
+                    top: 7px;
+                    bottom: 7px;
+        
+                    &.theme-btn {
+                        padding: 10px 20px;
+    
+                        i {
+                            transform: rotate(0deg);
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            }
+
+            .social-icon {
+                margin-top: 30px;
+                @include flex;
+                gap: 10px;
+    
+                a {
+                    width: 42px;
+                    height: 42px;
+                    line-height: 42px;
+                    display: inline-block;
+                    text-align: center;
+                    color: $white;
+                    border: 1px solid $theme-color;
+                    border-radius: 100px;
+                    @include transition;
+    
+                    &:hover {
+                        background: linear-gradient(106deg, #2AD3F8 10.42%, #933CFF 98.32%);
+                        border: 1px solid $theme-color;
+                    }
+                }
+            }
+        }
+
+        .contact-info {
+
+            .contact-item {
+
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+
+                li {
+                    color: $white;
+
+                    span {
+                        color: rgba(255, 255, 255, 0.75);
+                        font-size: 16px;
+                        font-weight: 500;
+                        display: inline-block;
+                        margin-bottom: 5px;
+                    }
+
+                    i {
+                        color: $theme-color;
+                        font-size: 24px;
+                        margin-right: 5px;
+                    }
+
+                    a {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .list-items {
+
+            li {
+                @include transition;
+                font-weight: 500;
+                font-size: 16px;
+
+                a {
+                    color: rgba(255, 255, 255, 0.75)
+                }
+
+                &:not(:last-child){
+                    margin-bottom: 13px;
+                }
+
+                &:hover {
+                    margin-left: 5px;
+
+                    a {
+                        color: $theme-color;
+                    }
+                }
+            }
+       }
+    }
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    background: #161C51;
+
+    .footer-wrapper {
+        @include flex;
+        justify-content: space-between;
+
+        @include breakpoint(max-xl) {
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        @include breakpoint(max-md) {
+            justify-content: center;
+            text-align: center;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.65);
+        }
+    
+        .bottom-list {
+            position: relative;
+    
+            li {
+                color: rgba(255, 255, 255, 0.65);
+            }
+        }
+    }
+}

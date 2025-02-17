@@ -1,0 +1,98 @@
+//>>>>> Component Button Here <<<<<//
+.theme-btn {
+    background: linear-gradient(106deg, #2AD3F8 10.42%, #933CFF 98.32%);
+    color: $white;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 21px 42px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+
+    &::before {
+        content: "";
+        background-color: $header-color;
+        width: 0;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        z-index: -1;
+        border-radius: 4px;
+    }
+
+    &::after {
+        content: "";
+        background-color: $header-color;
+        width: 0;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        z-index: -1;
+        border-radius: 4px;
+    }
+
+    i {
+        margin-left: 10px;
+        transform: rotate(-45deg);
+        @include transition;
+    }
+
+    &:hover {
+       color: $white;
+
+        &::before,&::after {
+            width: 100%;
+        }
+
+        i {
+            transform: rotate(0);
+        }
+    }
+
+    @include breakpoint (max-md){
+        padding: 20px 32px;
+    }
+
+    @include breakpoint (max-sm){
+        padding: 18px 30px;
+        font-size: 14px;
+    }
+}
+
+.link-btn {
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-block;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: capitalize;
+    color: $header-color;
+   
+
+    i {
+        transform: rotate(-40deg);
+        @include transition;
+        margin-left: 10px;
+    }
+
+    &:hover {
+        color: $theme-color;
+
+        i {
+            transform: rotate(0);
+        }
+    }
+}
+
+//>>>>> Component Button End <<<<<//

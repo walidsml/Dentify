@@ -1,0 +1,132 @@
+.faq-wrapper {
+
+    &.style-3 {
+       margin-top: 60px;
+    }
+
+    .faq-img {
+        position: relative;
+        max-width: 423px;
+
+        @include breakpoint(max-xl) {
+            max-width: 700px;
+        }
+
+        img {
+            border-radius: 12px;
+            @include imgw;
+        }
+
+        .faq-img-2 {
+            position: absolute;
+            right: -76px;
+            bottom: -50px;
+            border: 13px solid $white;
+            border-radius: 12px;
+            max-width: 292px;
+
+            @include breakpoint(max-xl) {
+                left: 0;
+                border: 13px none;
+                height: 270px;
+                bottom: 0;
+                width: 290px;
+            }
+
+            img {
+                @include imgw;
+                border-radius: 12px;
+            }
+        }
+    }
+    .faq-content {
+        
+        .faq-items {
+
+            &.style-2 {
+                @include breakpoint (max-xl) {
+                    margin-top: 30px;
+                }
+            }
+    
+            .accordion-item {
+                border: 0;
+                background-color: $white;
+                border-radius: 4px;
+              
+                .accordion-header { 
+                    border: none;
+                    .accordion-button { 
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $header-color;
+                        border: 0;
+                        border-radius: 0;
+                        box-shadow: none;
+                        background-color: $white;
+                        padding: 22px 22px 0;
+                        text-transform: capitalize;
+            
+                        &::after {
+                            content: "\f078";
+                            background: transparent;
+                            font-family: $fa;
+                            font-weight: 300;
+                            transition: all 0.3s ease-in-out !important;
+                            color: $header-color;
+                        }
+                        &:not(.collapsed)::after {
+                            content: "\f077";
+                            background: transparent;
+                            font-family: $fa;
+                            font-weight: 300;
+                            transform: rotate(0);
+                            color: $header-color;
+                        }
+            
+                        &.collapsed {
+                            background-color: transparent;
+                            padding: 25px 30px;
+                            color: $header-color;
+                        }
+                      
+                    }
+                }
+            
+                .accordion-collapse { 
+            
+                    .accordion-body {
+                        padding-left: 30px;
+                        padding-top: 15px;
+                        color: #504E4E;
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faq-section {
+    position: relative;
+
+    .shape {
+        position: absolute;
+        left: 26%;
+        top: 15%;
+
+        @include breakpoint(max-xl) {
+            display: none;
+        }
+    }
+
+    .shape2 {
+        position: absolute;
+        top: 100px;
+        right: 60px;
+
+        @include breakpoint(max-xl) {
+            display: none;
+        }
+    }
+}

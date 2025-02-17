@@ -1,0 +1,290 @@
+.about-wrapper {
+    margin-top: 40px;
+    margin-bottom: -7px;
+
+    @include breakpoint (max-xl4){
+        margin-top: 40px;
+    }
+
+    @include breakpoint (max-xl){
+        margin-top: 0;
+    }
+
+    .about-image {
+        position: relative;
+
+        img {
+            @include imgw;
+            border-radius: 12px;
+        }
+        .about-image-2 {
+            position: absolute;
+            top: -40px;
+            right: -52px;
+
+            @include breakpoint (max-xl){
+               top: 0;
+               right: inherit;
+               left: 0;
+            }
+
+            img {
+                width: initial;
+                height: initial;
+            }
+        }
+        .about-client-shape {
+            position: absolute;
+            bottom: 0;
+            right: -200px;
+
+            @include breakpoint (max-xl){
+                right: 0;
+            }
+        }
+
+        .dot-shape {
+            position: absolute;
+            top: -30px;
+            left: -45px;
+            z-index: -1;
+
+            @include breakpoint (max-xl){
+               display: none;
+            }
+        }
+    }
+
+    .about-content {
+        margin-left: 140px;
+
+        @include breakpoint (max-xxl){
+            margin-left: 100px;
+        }
+
+        @include breakpoint (max-xl){
+          margin-left: 0;
+        }
+
+        .section-title {
+            span {
+                margin-bottom: 30px;
+            }
+            p {
+                border-bottom: 1px solid#5F14AF30;
+                margin-top: 20px;
+                padding-bottom: 35px;
+                margin-bottom: 35px;
+            }
+        }
+        
+        .about-icon-box-items {
+           display: flex;
+           align-items: center;
+           gap: 60px;
+
+           @include breakpoint (max-xl){
+              flex-wrap: wrap;
+              gap: 30px;
+            }
+
+            .icon-box {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+        .theme-btn {
+            margin-top: 70px;
+        }
+        
+    }
+    
+}
+
+.about-wrapper-2 {
+    position: relative;
+
+    @include breakpoint (max-xl) {
+        margin-bottom: -15px;
+    }
+
+    .about-img {
+        max-width: 456px;
+        
+        img {
+            @include imgw;
+            border-radius: 12px;
+        }
+    }
+
+    .about-content {
+
+        .section-title-area {
+            @include breakpoint (max-xl){
+                gap: 30px;
+                flex-wrap: wrap;
+
+                .section-title {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include breakpoint (max-md){
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                p {
+                    margin-top: 20px;
+                    border-bottom: 1px solid #02084221;
+                    padding-bottom: 30px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .circle-image {
+                position: relative;
+
+                img {
+                    animation: cir36 10s linear infinite;
+                }
+
+                .content {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: center;
+
+                    h2 {
+                        color: $white;
+                    }
+
+                    p {
+                        color: $white;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        
+        .about-list-items {
+
+            .about-list {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+
+                @include breakpoint (max-xl){
+                    gap: 20px;
+                    flex-wrap: wrap;
+                }
+
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .about-counter-item {
+            @include flex;
+            gap: 60px;
+            margin-top: 80px;
+
+            @include breakpoint (max-xl){
+                gap: 30px;
+                flex-wrap: wrap;
+                margin-top: 40px;
+            }
+
+            .about-counter {
+                @include flex;
+                gap: 16px;
+                border-right: 1px solid rgba(2, 8, 66, 0.13);
+                padding-right: 40px;
+
+                @include breakpoint (max-xl){
+                  padding-right: 0;
+                  border-right: none;
+                  flex-wrap: wrap;
+                }
+
+                &.style-2 {
+                    border-right: 1px none;
+                    padding-right: 0;
+                }
+
+                .content {
+
+                    @include breakpoint (max-xl) {
+                        margin-bottom: 2px;
+                    }
+
+                    h2 {
+                        font-size: 66px;
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-section {
+    position: relative;
+
+    .top-shape {
+        position: absolute;
+        top: -100px;
+        left: 20px;
+        top: -282px;
+        left: 60px;
+        z-index: -1;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    .right-shape {
+        position: absolute;
+        right: 60px;
+        bottom: 50px;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+}
+
+.about-section2 {
+    position: relative;
+
+    .top-shape {
+        position: absolute;
+        left: 12%;
+        top: 2%;
+        z-index: -1;
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    &::before {
+        @include before;
+        background: #F4F5FD;
+        left: 34%;
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+    }
+}

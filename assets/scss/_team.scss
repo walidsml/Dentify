@@ -1,0 +1,332 @@
+.team-card-item {
+    margin-top: 30px;
+
+    &.style-2 {
+        margin-top: 0;
+        
+        .team-image {
+
+            img {
+                border-radius: 12px;
+            }
+        }
+    }
+
+    .team-image {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            @include imgw;
+        }
+
+        &::before {
+            @include before;
+            background: linear-gradient(180deg, rgba(2, 8, 66, 0.00) 23.8%, rgba(2, 8, 66, 0.92) 100%);
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+        }
+
+        .team-content {
+            position: absolute;
+            bottom: -25px;
+            left: 50px;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+
+            .team-contact {
+
+                li {
+                    font-weight: 500;
+                    @include flex;
+                    gap: 8px;
+
+                    i {
+                        color: $theme-color;
+                        font-size: 18px;
+                        margin-right: 5px;
+                    }
+
+                    a {
+                        color: $white;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        .social-icon {
+            padding: 18px 15px;
+            background: $white;
+            backdrop-filter: blur(15px);
+            position: absolute;
+            right: -100px;
+            bottom: 110px;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 2;
+            @include transition;
+            overflow: hidden;
+
+            li {
+
+                a {
+                    color: $theme-color;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .content {
+        text-align: center;
+        padding: 25px 0;
+        
+        p {
+            font-size: 15px;
+            font-weight: 600;
+            color: $theme-color;
+            letter-spacing: 0.3px;
+        }
+
+        h4 {
+            a {
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+
+    &:hover {
+
+        .team-image {
+
+            &::before {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .team-content {
+                opacity: 1;
+                visibility: visible;
+                bottom: 25px;
+            }
+
+            .social-icon {
+                opacity: 1;
+                visibility: visible;
+                right: 0;
+            }
+        }
+    }
+}
+
+
+.team-details-wrapper {
+    
+    .team-author-items {
+        @include flex;
+        gap: 30px;
+        padding: 30px;
+        border: 1px solid $border-color;
+        border-radius: 12px;
+        position: relative;
+
+        @include breakpoint (max-xl){
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            @include breakpoint(max-xl) {
+                display: none;
+            }
+        }
+        .thumb {
+            max-width: 370px;
+
+            img {
+                @include imgw;
+                border-radius: 8px;
+            }
+        }
+
+        .content {
+            max-width: 700px;
+
+            h2 {
+                font-size: 30px;
+                margin-bottom: 5px;
+
+                @include breakpoint (max-sm){
+                    font-size: 26px;
+                }
+            }
+
+            span {
+                margin-bottom: 10px;
+                display: inline-block;
+            }
+
+            ul {
+                margin-top: 20px;
+                @include flex;
+                gap: 50px;
+                border-top: 1px solid $border-color;
+                padding: 20px 0;
+
+                @include breakpoint (max-xl){
+                    flex-wrap: wrap;
+                    gap: 15px;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    justify-content: center;
+                }
+
+                li {
+                    color: $header-color;
+
+                    span {
+                        font-weight: 500;
+                        color: $theme-color;
+                    }
+
+                    i {
+                        margin-right: 5px;
+                    }
+
+                    .color-star {
+                        color: $theme-color;
+                    }
+                }
+            }
+
+            .social-icon {
+                gap: 15px;
+                position: relative;
+                z-index: 9;
+
+            a {
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                font-size: 16px;
+                display: block;
+                color: $theme-color;
+                transition: all .4s ease-in-out;
+                text-align: center;
+                background-color: transparent;
+                border: 1px solid $theme-color;
+
+                    &:hover {
+                        background-color: $theme-color;
+                        color: $white;
+                        border: 1px solid transparent
+                    }
+                }
+            }
+        }
+    }
+
+    .details-info-items {
+        padding: 70px 0;
+        border-bottom: 1px solid $border-color;
+
+        @include breakpoint (max-md){
+            padding: 50px 0;
+        }
+
+        @include breakpoint (max-sm){
+            padding: 40px 0;
+        }
+
+        .info-content {
+            h2 {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .progress-wrap {
+            margin-left: 30px;
+
+            @include breakpoint (max-lg){
+                margin-left: 0;
+            }
+
+            .pro-items {
+                width: 100%;
+
+                &:not(:last-child){
+                    margin-bottom: 20px;
+                }
+                .pro-head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+
+                    .title {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: $header-color;
+                    }
+                    
+                    .point {
+                        font-size: 16px;
+                        color: $header-color;
+                    }
+                }
+                .progress {
+                    background: $bg-color;
+                    justify-content: flex-start;
+                    border-radius: 0px;
+                    align-items: center;
+                    position: relative;
+                    display: flex;
+                    height: 10px;
+                    width: 100%;
+                }
+                
+                .progress-value {
+                    animation: load 3s normal forwards;
+                    border-radius: 0;
+                    background: $theme-color;
+                    height: 10px;
+                    width: 0;
+                }
+                .style-two{
+                    animation: load2 3s normal forwards;
+                }
+                .style-three{
+                    animation: load3 3s normal forwards;
+                }
+                @keyframes load {
+                    0% { width: 0; }
+                    100% { width: 90%; }
+                }
+                @keyframes load2 {
+                    0% { width: 0; }
+                    100% { width: 70%; }
+                }
+                @keyframes load3 {
+                    0% { width: 0; }
+                    100% { width: 55%; }
+                }
+            }
+        }
+    }
+}

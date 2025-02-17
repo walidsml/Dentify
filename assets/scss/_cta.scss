@@ -1,0 +1,205 @@
+.cta-video-wrapper {
+    padding: 190px 0;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    z-index: 9;
+    background-attachment: fixed;
+
+    @include breakpoint (max-lg) {
+        padding: 160px 0;
+    }
+
+    @include breakpoint (max-lg) {
+        padding: 130px 0;
+    }
+
+    @include breakpoint (max-md) {
+        padding: 110px 0;
+    }
+
+    @include breakpoint (max-sm) {
+        padding: 90px 0;
+    }
+
+    &::before {
+        @include before;
+        background: rgba(2, 8, 66, 0.27);
+        border-radius: 20px;
+        z-index: -1;
+    }
+
+    .left-shape {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .right-shape {
+        position: absolute;
+        right: -120px;
+        bottom: -257px;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .dot-shape  {
+        position: absolute;
+        left: -30px;
+        bottom: -70px;
+        z-index: 1;
+
+        @include breakpoint (max-xl) {
+            display: none;
+        }
+    }
+
+    .video-btn {
+        width: 114px;
+        height: 114px;
+        line-height: 114px;
+        text-align: center;
+        border-radius: 100px;
+        background-color: $white;
+        color: $theme-color;
+        font-size: 24px;
+        display: inline-block;
+        position: relative;
+        z-index: 9;
+
+        @include breakpoint (max-md) {
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+    }
+}
+
+.cta-video-section {
+    position: relative;
+
+    &::before {
+        @include before;
+        background: #EBF3FC;
+        top: 50%;
+    }
+}
+
+.cta-wrapper {
+    padding: 120px 50px;
+
+    @include breakpoint (max-xl){
+        padding: 100px 40px;
+    }
+
+    @include breakpoint (max-lg){
+        padding: 80px 30px;
+    }
+
+    &::before {
+        @include before;
+        border-radius: 4px;
+        background: linear-gradient(106deg, rgba(42, 211, 248, 0.88) 10.42%, rgba(147, 60, 255, 0.88) 98.32%);
+    }
+    .cta-button {
+        position: relative;
+        z-index: 9;
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        margin-top: 50px;
+
+        @include breakpoint (max-xl){
+            flex-wrap: wrap;
+        }
+
+        .theme-btn {
+           background: $white;
+           color: $theme-color;
+        }
+        .cta-icon {
+            display: flex;
+            align-items: center;
+            i {
+                width: 50px;
+                height: 50px;
+                background-color: $white;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 50px;
+                color: $theme-color;
+            }
+            .cta-content {
+                margin-left: 12px;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 0.67);
+                }
+                h5 {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.cta-section2 {
+    position: relative;
+
+    &::before {
+        @include before;
+        background: rgba(235, 243, 252, 1);
+        top: -50%;
+    }
+}
+
+.cta-video-section2 {
+    position: relative;
+    background-attachment: fixed;
+    
+    &::before {
+        @include before;
+        background: rgba(2, 8, 66, 0.27);
+    }
+
+    .left-shape {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .right-shape {
+        right: -166px;
+        position: absolute;
+        bottom: -275px;
+    }
+}
+
+
+.cta-video-wrapper3 {
+    padding: 250px 0;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+
+    .video-btn {
+        width: 114px;
+        height: 114px;
+        line-height: 114px;
+        text-align: center;
+        border-radius: 100px;
+        background-color: $white;
+        color: $theme-color;
+        font-size: 24px;
+        display: inline-block;
+    }
+}
